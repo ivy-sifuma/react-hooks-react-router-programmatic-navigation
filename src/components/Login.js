@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 function Login({ setIsLoggedIn }) {
  const history = useHistory();
 
- function Login({onLoginn}) {
+
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -33,7 +33,7 @@ function Login({ setIsLoggedIn }) {
     })
       .then((r) => r.json())
       .then((user) => {
-        onLogin(user);
+       
         // after logging the user in, redirect to the home page!
         history.push("/home");
       });
@@ -57,6 +57,6 @@ function Login({ setIsLoggedIn }) {
       <button type="submit">Login</button>
     </form>
   );
-}}
+}
 
 export default Login;
